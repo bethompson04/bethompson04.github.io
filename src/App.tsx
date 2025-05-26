@@ -9,26 +9,26 @@ import Artwork from './pages/Artwork';
 
 const theme = createTheme({
   palette: {
-    mode: 'light', // Can be 'light' or 'dark'
+    mode: 'dark', // Switching to dark mode
     primary: {
-      main: '#2196f3', // Main brand color (used in AppBar, buttons, etc)
-      light: '#64b5f6', // Lighter version of the main color
-      dark: '#1976d2', // Darker version of the main color
-      contrastText: '#ffffff', // Text color that shows up well on primary.main
+      main: '#90caf9', // Lighter blue for better visibility in dark mode
+      light: '#e3f2fd',
+      dark: '#42a5f5',
+      contrastText: '#000000',
     },
     secondary: {
-      main: '#f50057', // Secondary brand color (used for highlighting and secondary actions)
-      light: '#ff4081',
-      dark: '#c51162',
-      contrastText: '#ffffff',
+      main: '#f48fb1', // Lighter pink for better visibility in dark mode
+      light: '#ffc1e3',
+      dark: '#bf5f82',
+      contrastText: '#000000',
     },
     background: {
-      default: '#ffffff', // Page background
-      paper: '#f5f5f5', // Background of Paper components
+      default: '#121212', // Material Design recommended dark background
+      paper: '#1e1e1e', // Slightly lighter than background for cards
     },
     text: {
-      primary: 'rgba(0, 0, 0, 0.87)', // Main text color
-      secondary: 'rgba(0, 0, 0, 0.6)', // Secondary text color
+      primary: '#ffffff', // White text for dark mode
+      secondary: 'rgba(255, 255, 255, 0.7)', // Slightly transparent white for secondary text
     }
   },
   typography: {

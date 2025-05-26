@@ -14,23 +14,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Software: React.FC = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'Description of your first software project.',
+      title: 'This Portfolio Website',
+      description: 'I created this website with the help of Cursor AI. The website itself uses React, Typescript, and MUI. It is hosted here on Github Pages!',
       image: '/project1-placeholder.jpg',
-      github: 'https://github.com/yourusername/project1',
-    },
-    {
-      title: 'Project 2',
-      description: 'Description of your second software project.',
-      image: '/project2-placeholder.jpg',
-      github: 'https://github.com/yourusername/project2',
-    },
+      github: 'https://github.com/bethompson04/bethompson04.github.io',
+    }
     // Add more projects as needed
   ];
 
   return (
-    <Container>
-      <Typography variant="h3" component="h1" gutterBottom sx={{ mb: 4 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Typography variant="h3" component="h1" gutterBottom sx={{ mb: 4, textAlign: 'center' }}>
         Software Projects
       </Typography>
       <Box sx={{
@@ -40,10 +34,23 @@ const Software: React.FC = () => {
           sm: 'repeat(2, 1fr)',
           md: 'repeat(3, 1fr)'
         },
-        gap: 4
+        gap: 4,
+        width: '100%',
+        justifyItems: 'center'
       }}>
         {projects.map((project, index) => (
-          <Card key={index}>
+          <Card 
+            key={index}
+            sx={{
+              width: '100%',
+              maxWidth: 345,
+              transition: 'transform 0.2s, box-shadow 0.2s',
+              '&:hover': {
+                transform: 'translateY(-4px)',
+                boxShadow: (theme) => `0 6px 12px ${theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'}`
+              }
+            }}
+          >
             <CardMedia
               component="img"
               height="200"
@@ -71,7 +78,7 @@ const Software: React.FC = () => {
           </Card>
         ))}
       </Box>
-    </Container>
+    </Box>
   );
 };
 

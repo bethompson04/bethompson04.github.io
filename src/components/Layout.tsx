@@ -71,8 +71,8 @@ const Layout: React.FC = () => {
           </Stack>
         </Toolbar>
       </AppBar>
-      <Container maxWidth="lg" sx={{ mt: 4 }}>
-        <Box sx={{ minHeight: 'calc(100vh - 64px)' }}>
+      <Container maxWidth="lg" sx={{ mt: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Box sx={{ width: '100%', minHeight: 'calc(100vh - 64px)' }}>
           <Outlet />
         </Box>
       </Container>
