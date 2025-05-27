@@ -21,22 +21,7 @@ const Layout: React.FC = () => {
                 }
               }}
             >
-              Portfolio
-            </Button>
-            <Button 
-              color="inherit" 
-              component={RouterLink} 
-              to="/software"
-              sx={{ 
-                height: '64px',
-                px: 3,
-                borderRadius: 0,
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                }
-              }}
-            >
-              Software
+              About Me
             </Button>
             <Button 
               color="inherit" 
@@ -67,6 +52,36 @@ const Layout: React.FC = () => {
               }}
             >
               Artwork
+            </Button>
+            <Button 
+              color="inherit" 
+              component={RouterLink} 
+              to="/software"
+              sx={{ 
+                height: '64px',
+                px: 3,
+                borderRadius: 0,
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                }
+              }}
+            >
+              Software
+            </Button>
+            <Button 
+              color="inherit" 
+              component={RouterLink} 
+              to="/contact"
+              sx={{ 
+                height: '64px',
+                px: 3,
+                borderRadius: 0,
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                }
+              }}
+            >
+              Contact Me
             </Button>
           </Stack>
         </Toolbar>

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Software from './pages/Software';
 import Games from './pages/Games';
 import Artwork from './pages/Artwork';
+import Contact from './pages/Contact';
 
 const theme = createTheme({
   palette: {
@@ -52,9 +53,10 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="software" element={<Software />} />
             <Route path="games" element={<Games />} />
             <Route path="artwork" element={<Artwork />} />
+            <Route path="software" element={<Software />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
