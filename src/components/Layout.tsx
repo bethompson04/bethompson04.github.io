@@ -10,7 +10,7 @@ import Contact from '../pages/Contact';
 // Define animation variants
 const pageVariants = {
   initial: (custom: { oldIndex: number, newIndex: number }) => ({
-    x: custom.newIndex > custom.oldIndex ? '100%' : '-100%',
+    x: custom.newIndex > custom.oldIndex ? '125%' : '-125%',
     opacity: 1,
     width: '100%',
     height: '100%',
@@ -22,7 +22,7 @@ const pageVariants = {
     height: '100%',
   },
   exit: (custom: { oldIndex: number, newIndex: number }) => ({
-    x: custom.newIndex > custom.oldIndex ? '-100%' : '100%',
+    x: custom.newIndex > custom.oldIndex ? '-125%' : '125%',
     opacity: 1,
     width: '100%',
     height: '100%',
@@ -188,9 +188,7 @@ const Layout: React.FC = () => {
       <Container maxWidth="lg" sx={{ mt: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box sx={{ 
           width: '100%', 
-          minHeight: 'calc(100vh - 64px - 32px)',
           position: 'relative',
-          overflow: 'hidden',
           backgroundColor: '#2a2a2a'
         }}>
           <AnimatePresence initial={false} mode="wait" custom={{ oldIndex: prevPathIndex, newIndex: currentPathIndex }}> {/* Pass indices as custom prop */}
@@ -202,14 +200,15 @@ const Layout: React.FC = () => {
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                backgroundColor: '#2a2a2a'
+                backgroundColor: '#2a2a2a',
+                zIndex: 1 // Add z-index to ensure proper layering during transition
               }}
               variants={pageVariants}
               initial="initial"
               animate="animate"
               exit="exit"
-              custom={{ oldIndex: prevPathIndex, newIndex: currentPathIndex }} // Pass indices as custom prop to motion.div as well
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              custom={{ oldIndex: prevPathIndex, newIndex: currentPathIndex }}
+              transition={{ duration: 0.4, ease: 'easeOut' }} // Change easing to easeOut
             >
               {renderContent(location)}
             </motion.div>
