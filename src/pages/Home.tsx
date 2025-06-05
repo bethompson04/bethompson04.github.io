@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, Paper, Avatar, Stack, LinearProgress } from '@mui/material';
+import { Typography, Box, Paper, Avatar, Stack, LinearProgress, Button } from '@mui/material';
 
 interface Skill {
   name: string;
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
             src="/assets/art/Card_GENESISpfp.png"
           />
           <Stack spacing={1} alignItems="center">
-            <Typography variant="h2" component="h1">
+            <Typography variant="h1" component="h1">
               Bennie Thompson
             </Typography>
             <Typography 
@@ -94,14 +94,34 @@ const Home: React.FC = () => {
             </Typography>
           </Stack>
           
+          {/* Resume Button */}
+          <Button 
+            variant="contained"
+            href="https://docs.google.com/document/d/1IrFq6GdNbtKPzA3byOe3-y08MGR18Ka7HaLsmRobvP0/edit?usp=sharing" // Replace with your actual resume website URL
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ 
+              mt: 2,
+              backgroundColor: '#1e65e8',
+              color: 'white', // Ensure text is white
+              '&:hover': {
+                backgroundColor: '#1a5ad4',
+                color: 'white', // Keep text white on hover
+              }
+            }}
+          >
+            View Resume
+          </Button>
+          
           {/* About Me Section */}
           <Paper elevation={3} sx={{ p: 4, maxWidth: '100%', width: '100%' }}>
             <Typography variant="h5" gutterBottom>
               About Me
             </Typography>
+
             <Typography paragraph>
-              Hi! I'm a creative professional with a passion for game development, software engineering, and digital art. 
-              I specialize in creating engaging experiences through code and visual design.
+              Greetings! I'm a creative mind with a passion for game development, software engineering, and digital art. 
+              I drive myself with creating experiences for people to enjoy and be inspired by.
             </Typography>
             <Typography paragraph>
               With experience in both technical and artistic domains, I bring a unique perspective to my work. 

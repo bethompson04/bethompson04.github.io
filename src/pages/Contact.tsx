@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
       name: 'benniert06@gmail.com',
       icon: <EmailIcon sx={{ fontSize: 40 }} />,
       url: '',
-      color: '#EA4335'
+      color: '#f2eb22'
     },
   ];
 

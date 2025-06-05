@@ -33,7 +33,7 @@ const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Montserrat", sans-serif', // Set Montserrat as the primary font
     h1: {
       fontSize: '2.5rem',
       fontWeight: 500,
@@ -42,6 +42,11 @@ const theme = createTheme({
       fontSize: '2rem',
       fontWeight: 500,
     },
+    // You can define specific typography variants here if needed
+    // For example, if you want a different font for body text:
+    // body1: {
+    //   fontFamily: '"Roboto", sans-serif',
+    // },
   },
 });
 
