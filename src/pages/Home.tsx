@@ -109,6 +109,8 @@ const Home: React.FC = () => {
                 color: 'white', // Keep text white on hover
               }
             }}
+
+            
           >
             View Resume
           </Button>

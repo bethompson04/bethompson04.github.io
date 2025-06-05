@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Typography, ImageList, ImageListItem, Box, Container, useTheme, useMediaQuery, Dialog } from '@mui/material';
 
 const Artwork: React.FC = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
 
   const getCols = () => {
     if (isSmallScreen) return 1;
