@@ -45,7 +45,7 @@ const Home: React.FC = () => {
         }}>
           <img 
             src="/assets/art/NeuBen3.jpg" // Replace with your left image path
-            alt="Left decorative image"
+            alt="Left decorative"
             style={{
               width: '100%',
               height: 'auto',
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
         }}>
            <img 
             src="/assets/art/NeuBen1.jpg" // Replace with your right image path
-            alt="Right decorative image"
+            alt="Right decorative"
             style={{
               width: '100%',
               height: 'auto',
