@@ -14,7 +14,7 @@ const Layout: React.FC = () => {
   const [prevLocation, setPrevLocation] = React.useState(location.pathname);
   const [isTransitioning, setIsTransitioning] = React.useState(false);
   const [currentPath, setCurrentPath] = React.useState(location.pathname);
-  const [slideDirection, setSlideDirection] = React.useState(0);
+  const [slideDirection, setSlideDirection] = React.useState<number>(0);
 
   React.useEffect(() => {
     if (location.pathname !== currentPath) {
@@ -154,28 +154,24 @@ const Layout: React.FC = () => {
           backgroundColor: 'background.default'
         }}>
           {/* Base layer - shows the current content with slide-in animation */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentPath}
-              style={{
-                position: 'absolute',
-                width: '100%',
-                top: 0,
-                left: 0,
-                display: isTransitioning ? 'none' : 'block'
-              }}
-              initial={{ x: slideDirection === -1 ? '100%' : '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: slideDirection === -1 ? '-100%' : '100%' }}
-              transition={{
-                type: "tween",
-                duration: 0.4,
-                ease: [0.4, 0.0, 0.2, 1]
-              }}
-            >
-              <Outlet />
-            </motion.div>
-          </AnimatePresence>
+          <>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentPath}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'relative',
+                  backgroundColor: '#2a2a2a'
+                }}
+                initial={{ x: slideDirection === -1 ? '100%' : '-100%' }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+              >
+                {renderContent(currentPath)}
+              </motion.div>
+            </AnimatePresence>
+          </>
           
           {/* Animated layer - shows the old content while it slides off */}
           <AnimatePresence>
