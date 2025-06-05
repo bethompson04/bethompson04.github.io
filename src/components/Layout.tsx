@@ -140,7 +140,6 @@ const Layout: React.FC = () => {
           width: '100%', 
           minHeight: 'calc(100vh - 64px)',
           position: 'relative',
-          overflow: 'hidden',
           backgroundColor: 'background.default'
         }}>
           {/* Base layer - shows the current content with slide-in animation */}

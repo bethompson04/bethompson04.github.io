@@ -47,7 +47,7 @@ const Software: React.FC = () => {
               transition: 'transform 0.2s, box-shadow 0.2s',
               '&:hover': {
                 transform: 'translateY(-4px)',
-                boxShadow: (theme) => `0 6px 12px ${theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'}`
+                boxShadow: '0 6px 12px rgba(30, 101, 232, 0.5)'
               }
             }}
           >
