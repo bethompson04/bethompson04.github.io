@@ -135,6 +135,17 @@ const Layout: React.FC = () => {
           </Stack>
         </Toolbar>
       </AppBar>
+
+      {/* Subtle blue glow below the header */}
+      <Box sx={{
+        height: '2px', // Made thinner
+        width: '100%',
+        backgroundColor: '#1e65e8', // Base color
+        boxShadow: '0 6px 20px rgba(30, 101, 232, 1)', // Even stronger glow shadow (increased blur, spread, and opacity)
+        // Adjust margin-top if needed to position it right below the AppBar
+        // mt: '-2px' // Example to pull it up slightly if there's a gap, matching the new height
+      }} />
+
       <Container maxWidth="lg" sx={{ mt: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box sx={{ 
           width: '100%', 

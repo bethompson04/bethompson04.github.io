@@ -28,6 +28,16 @@ const Artwork: React.FC = () => {
       title: 'Kamen Jogger',
       image: '/assets/art/KamenJogger7.png',
       description: 'Concert artwork for fun'
+    },
+    {
+      title: 'GENESIS Art',
+      image: '/assets/art/Card_GENESISART.PNG',
+      description: 'Work inspired by GENESIS'
+    },
+    {
+      title: 'Hatsune Miku',
+      image: '/assets/art/MikuScreenshot.PNG',
+      description: 'Art of Hatsune Miku from Vocaloid'
     }
   ];
 

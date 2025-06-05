@@ -44,7 +44,7 @@ const Home: React.FC = () => {
           // mr: { md: 2 } // Optional: add margin to the right
         }}>
           <img 
-            src="/assets/art/Card_GENESISpfp.png" // Replace with your left image path
+            src="/assets/art/NeuBen3.jpg" // Replace with your left image path
             alt="Left decorative image"
             style={{
               width: '100%',
@@ -151,7 +151,7 @@ const Home: React.FC = () => {
           // ml: { md: 2 } // Optional: add margin to the left
         }}>
            <img 
-            src="/assets/art/Card_GENESISpfp.png" // Replace with your right image path
+            src="/assets/art/NeuBen1.jpg" // Replace with your right image path
             alt="Right decorative image"
             style={{
               width: '100%',
